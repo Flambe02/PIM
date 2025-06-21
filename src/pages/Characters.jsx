@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Star, Mic } from "lucide-react";
+import { createPageUrl } from "@/utils";
 
 export default function Characters() {
   const [isLoading, setIsLoading] = useState(true);
@@ -184,14 +186,26 @@ export default function Characters() {
               Écoutez leurs aventures dans nos albums "Molière en Chansons" et "Il était une chanson".
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              {['Scapin', 'Agnès', 'Tartuffe', 'Cendrillon', 'Peau d\'Âne', 'Le Loup'].map((name, index) => (
-                <Badge 
+              {[
+                { name: 'Scapin', album: 'Albums' },
+                { name: 'Agnès', album: 'Albums' },
+                { name: 'Tartuffe', album: 'Albums' },
+                { name: 'Cendrillon', album: 'Albums' },
+                { name: 'Peau d\'Âne', album: 'Albums' },
+                { name: 'Le Loup', album: 'Albums' }
+              ].map((character, index) => (
+                <Link
                   key={index}
-                  variant="secondary" 
-                  className="text-lg px-4 py-2 bg-white/60 hover:bg-white/80 transition-colors cursor-pointer"
+                  to={createPageUrl(character.album)}
+                  className="inline-block"
                 >
-                  {name}
-                </Badge>
+                  <Badge 
+                    variant="secondary" 
+                    className="text-lg px-4 py-2 bg-white/60 hover:bg-white/80 transition-colors cursor-pointer hover:scale-105"
+                  >
+                    {character.name}
+                  </Badge>
+                </Link>
               ))}
             </div>
           </div>

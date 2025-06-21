@@ -13,15 +13,69 @@
     <!-- balises Open Graph (aperçu WhatsApp, Facebook, etc.) -->
     <meta property="og:title" content="Pimentão en Chansons" />
     <meta property="og:description" content="Les classiques en musique pour enfants" />
-    <meta property="og:image" content="https://flambe02.github.io/PIM/preview.jpg" /> <!-- adapte l'URL si tu veux une image personnalisée -->
-    <meta property="og:url" content="https://flambe02.github.io/PIM/" />
+    <meta property="og:image" content="https://www.pimentao.fr/preview.jpg" /> <!-- adapte l'URL si tu veux une image personnalisée -->
+    <meta property="og:url" content="https://www.pimentao.fr/" />
     <meta property="og:type" content="website" />
 
     <!-- Twitter Cards (optionnel) -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Pimentão en Chansons" />
     <meta name="twitter:description" content="Les classiques en musique pour enfants." />
-    <meta name="twitter:image" content="https://flambe02.github.io/PIM/preview.jpg" />
+    <meta name="twitter:image" content="https://www.pimentao.fr/preview.jpg" />
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYDPHP42W8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PYDPHP42W8');
+    </script>
+
+    <!-- Données Structurées JSON-LD pour le SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Pimentão en Chansons",
+      "url": "https://www.pimentao.fr/",
+      "description": "Les classiques de la littérature française réinventés en musique pour enfants. Des albums éducatifs et ludiques pour apprendre en s'amusant.",
+      "image": "https://www.pimentao.fr/preview.jpg",
+      "album": [
+        {
+          "@type": "MusicAlbum",
+          "name": "Il était une chanson",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "name": "Pimentão en Chansons"
+          },
+          "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/e3d74965a_PochetteAlbum.png",
+          "numTracks": 11
+        },
+        {
+          "@type": "MusicAlbum",
+          "name": "Les Fables en Chantant",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "name": "Pimentão en Chansons"
+          },
+          "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/c8c4d1a1d_PochetteAlbumFables.jpg",
+          "numTracks": 12
+        },
+        {
+          "@type": "MusicAlbum",
+          "name": "Molière en Chansons",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "name": "Pimentão en Chansons"
+          },
+          "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/bed400a8b_pochette1.png",
+          "numTracks": 15
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

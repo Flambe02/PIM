@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -15,7 +14,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <img 
             src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80"
-            alt="Enfants qui chantent"
+            alt="Groupe d'enfants souriants qui chantent en plein air"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/80 via-pink-500/70 to-blue-500/80"></div>
@@ -40,10 +39,10 @@ export default function Home() {
               Pimentão en Chansons
             </h1>
             <p className="text-2xl md:text-3xl mb-2 font-light">
-              Aventures Musicales Magiques
+              La musique pour enfants qui réinvente les classiques
             </p>
             <p className="text-lg md:text-xl mb-8 opacity-90">
-              3 albums enchanteurs qui transforment l'apprentissage en plaisir
+              3 albums éducatifs pour apprendre en s'amusant.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -88,10 +87,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-              Nos Albums Magiques
+              Des albums éducatifs et ludiques
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Trois collections uniques qui transforment les grands classiques en aventures musicales
+              Trois collections de chansons pour enfants qui transforment les grands classiques de la littérature française en aventures musicales inoubliables.
             </p>
           </div>
 
@@ -123,7 +122,7 @@ export default function Home() {
                 <div className="relative h-64 overflow-hidden">
                   <img 
                     src={album.image}
-                    alt={album.title}
+                    alt={`Pochette de l'album ${album.title} - ${album.subtitle}`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -155,10 +154,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-              Pourquoi choisir nos albums
+              Apprendre en musique : nos engagements
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Chaque chanson est conçue pour inspirer la créativité, l'apprentissage et la joie pure
+              Chaque chanson pour enfant est conçue pour inspirer la créativité, l'apprentissage et la joie pure.
             </p>
           </div>
 
@@ -170,7 +169,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-purple-700 mb-4">Éducatif et Amusant</h3>
                 <p className="text-gray-600">
-                  Nos chansons transforment l'apprentissage en moment de plaisir avec les grands classiques de la littérature
+                  Nos chansons pour apprendre transforment les grands classiques de la littérature en un moment de plaisir.
                 </p>
               </CardContent>
             </Card>
@@ -182,7 +181,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-pink-700 mb-4">Valeurs Positives</h3>
                 <p className="text-gray-600">
-                  Chaque histoire enseigne de précieuses leçons sur l'amitié, la sagesse et les valeurs humaines
+                  Chaque histoire enseigne de précieuses leçons sur l'amitié, la sagesse et le respect.
                 </p>
               </CardContent>
             </Card>
@@ -194,7 +193,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-blue-700 mb-4">Qualité Professionnelle</h3>
                 <p className="text-gray-600">
-                  Production musicale soignée et arrangements adaptés pour captiver l'attention des enfants
+                  Une production musicale soignée et des arrangements modernes pour captiver l'attention des enfants.
                 </p>
               </CardContent>
             </Card>
@@ -206,10 +205,10 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
-            Prêt pour l'aventure musicale ?
+            Prêts pour l'aventure musicale ?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Découvrez nos albums sur toutes les plateformes de streaming et amusez-vous avec notre karaoké interactif
+            Écoutez nos albums de musique pour enfants sur toutes les plateformes de streaming et amusez-vous avec notre karaoké interactif.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

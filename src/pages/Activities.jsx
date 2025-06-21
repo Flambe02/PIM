@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -96,7 +95,8 @@ export default function Activities() {
       description: "Sauras-tu reconnaître qui est qui ? Teste tes connaissances sur les héros de nos albums !",
       age_range: "6-12 ans",
       difficulty: "moyen",
-      instructions: "Lis la description ou la citation et devine de quel personnage il s'agit."
+      instructions: "Lis la description ou la citation et devine de quel personnage il s'agit.",
+      image_url: "/quiz-personnages.png"
     }
   ];
 

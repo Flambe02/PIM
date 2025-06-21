@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { Home, Music, Users, Gamepad2, Info, Disc3, Mic, Lock } from "lucide-react";
+import { Home, Music, Users, Gamepad2, Info, Disc3, Mic, Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const baseNavigationItems = [
   { title: "Accueil", url: createPageUrl("Home"), icon: Home },
@@ -13,12 +14,15 @@ const baseNavigationItems = [
   { title: "À Propos", url: createPageUrl("About"), icon: Info },
 ];
 
-export default function Layout({ children, currentPageName }) {
+export default function Layout({ children }) {
   const location = useLocation();
   const [navigationItems, setNavigationItems] = useState(baseNavigationItems);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-  }, [location.pathname]); // Re-run this effect when the URL path changes
+    // Close menu on route change
+    setIsMenuOpen(false);
+  }, [location.pathname]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
@@ -66,7 +70,7 @@ export default function Layout({ children, currentPageName }) {
       </style>
 
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-md border-b border-purple-100 sticky top-0 z-50">
+      <header className="bg-white/80 backdrop-blur-md border-b border-purple-100 sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link to={createPageUrl("Home")} className="flex items-center gap-2 md:gap-3">
@@ -99,37 +103,71 @@ export default function Layout({ children, currentPageName }) {
                 </Link>
               ))}
             </nav>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMenuOpen(true)}
+                className="p-2 rounded-md text-gray-600 hover:bg-purple-100"
+                aria-label="Ouvrir le menu"
+              >
+                <Menu className="w-6 h-6" />
+              </button>
+            </div>
           </div>
         </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/60 z-50 md:hidden"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+              className="absolute top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-lg"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="p-4 flex justify-end">
+                <button
+                  onClick={() => setIsMenuOpen(false)}
+                  className="p-2 rounded-md text-gray-600 hover:bg-gray-100"
+                  aria-label="Fermer le menu"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              <nav className="flex flex-col p-4 space-y-2">
+                {navigationItems.map((item) => (
+                  <Link
+                    key={item.title}
+                    to={item.url}
+                    className={`flex items-center gap-4 p-4 rounded-lg text-lg font-medium transition-colors ${
+                      location.pathname === item.url ? 'bg-purple-100 text-purple-700' : 'text-gray-700 hover:bg-gray-50'
+                    }`}
+                  >
+                    <item.icon className="w-5 h-5" />
+                    <span>{item.title}</span>
+                  </Link>
+                ))}
+              </nav>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Main Content */}
       <main className="flex-1">
         {children}
       </main>
-
-      {/* Mobile Navigation */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-purple-100 px-1 py-2">
-        <div className="flex justify-around">
-          {navigationItems.map((item) => (
-            <Link
-              key={item.title}
-              to={item.url}
-              className={`flex flex-col items-center gap-1 px-2 py-2 rounded-xl transition-all duration-300 ${
-                location.pathname === item.url
-                  ? 'bg-purple-100 text-purple-700 scale-110'
-                  : 'text-gray-500 hover:text-purple-600'
-              }`}
-            >
-              <item.icon className="w-4 h-4" />
-              <span className="text-xs font-medium whitespace-nowrap">{item.title}</span>
-            </Link>
-          ))}
-        </div>
-      </nav>
-
-      {/* Footer Spacer for Mobile */}
-      <div className="h-20 md:h-0"></div>
     </div>
   );
 }

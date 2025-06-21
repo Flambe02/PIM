@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Track } from "@/api/entities";
 import { Play, Pause, Music, Clock, Heart, ExternalLink } from "lucide-react";
@@ -88,21 +87,23 @@ export default function Tracks() {
 
         {/* Album Selection */}
         <div className="flex justify-center mb-12">
-          <div className="flex flex-wrap gap-4 bg-white/80 backdrop-blur-md rounded-full p-2 shadow-lg">
-            {Object.entries(albums).map(([key, album]) => (
-              <Button
-                key={key}
-                variant={selectedAlbum === key ? "default" : "ghost"}
-                onClick={() => setSelectedAlbum(key)}
-                className={`rounded-full px-6 py-2 transition-all duration-300 ${
-                  selectedAlbum === key
-                    ? `bg-gradient-to-r ${album.color} text-white shadow-lg scale-105`
-                    : 'hover:bg-purple-50 hover:text-purple-600 hover:scale-105'
-                }`}
-              >
-                {album.title}
-              </Button>
-            ))}
+          <div className="w-full max-w-md sm:w-auto sm:max-w-none">
+            <div className="flex flex-col sm:flex-row sm:bg-white/80 sm:backdrop-blur-md sm:rounded-full sm:p-2 sm:shadow-lg gap-2">
+              {Object.entries(albums).map(([key, album]) => (
+                <Button
+                  key={key}
+                  variant={selectedAlbum === key ? "default" : "ghost"}
+                  onClick={() => setSelectedAlbum(key)}
+                  className={`w-full sm:w-auto justify-center rounded-full px-4 sm:px-6 py-3 sm:py-2 text-base sm:text-sm transition-all duration-300 ${
+                    selectedAlbum === key
+                      ? `bg-gradient-to-r ${album.color} text-white shadow-lg scale-105`
+                      : 'bg-white/80 backdrop-blur-md shadow-md sm:shadow-none sm:bg-transparent hover:bg-purple-50 hover:text-purple-600 hover:scale-105'
+                  }`}
+                >
+                  {album.title}
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
 

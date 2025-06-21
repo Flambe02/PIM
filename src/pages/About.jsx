@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Music, Users, Star, Award, Sparkles } from "lucide-react";
+import { createPageUrl } from "@/utils";
 
 export default function About() {
   return (
@@ -13,7 +15,7 @@ export default function About() {
             À Propos de Nos Chansons
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Des chansons inspirées des grands classiques pour éveiller les jeunes esprits, nourrir l’imaginaire et transmettre en douceur les leçons de la vie.
+            Des chansons inspirées des grands classiques pour éveiller les jeunes esprits, nourrir l'imaginaire et transmettre en douceur les leçons de la vie.
           </p>
         </div>
 
@@ -137,15 +139,21 @@ export default function About() {
                 Merci de faire partie de notre projet. Ensemble, créons des souvenirs musicaux inoubliables pour les enfants.
               </p>
               <div className="flex justify-center gap-4">
-                <Badge className="bg-purple-500 text-white px-4 py-2 text-lg">
-                  Contes
-                </Badge>
-                <Badge className="bg-pink-500 text-white px-4 py-2 text-lg">
-                  Fables
-                </Badge>
-                <Badge className="bg-blue-500 text-white px-4 py-2 text-lg">
-                  Théâtre
-                </Badge>
+                <Link to={createPageUrl("Albums")} className="inline-block">
+                  <Badge className="bg-purple-500 text-white px-4 py-2 text-lg hover:bg-purple-600 transition-colors cursor-pointer hover:scale-105">
+                    Contes
+                  </Badge>
+                </Link>
+                <Link to={createPageUrl("Albums")} className="inline-block">
+                  <Badge className="bg-pink-500 text-white px-4 py-2 text-lg hover:bg-pink-600 transition-colors cursor-pointer hover:scale-105">
+                    Fables
+                  </Badge>
+                </Link>
+                <Link to={createPageUrl("Albums")} className="inline-block">
+                  <Badge className="bg-blue-500 text-white px-4 py-2 text-lg hover:bg-blue-600 transition-colors cursor-pointer hover:scale-105">
+                    Théâtre
+                  </Badge>
+                </Link>
               </div>
             </CardContent>
           </Card>
