@@ -5,7 +5,7 @@ import { Home, Music, Users, Gamepad2, Info, Disc3, Mic, Menu, X } from "lucide-
 import { AnimatePresence, motion } from "framer-motion";
 
 const baseNavigationItems = [
-  { title: "Accueil", url: createPageUrl("Home"), icon: Home },
+  { title: "Accueil", url: "/", icon: Home },
   { title: "Albums", url: createPageUrl("Albums"), icon: Disc3 },
   { title: "Chansons", url: createPageUrl("Tracks"), icon: Music },
   { title: "Karaoké", url: createPageUrl("Karaoke"), icon: Mic },
@@ -73,7 +73,7 @@ export default function Layout({ children }) {
       <header className="bg-white/80 backdrop-blur-md border-b border-purple-100 sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Link to={createPageUrl("Home")} className="flex items-center gap-2 md:gap-3">
+            <Link to="/" className="flex items-center gap-2 md:gap-3">
               <div className="w-10 h-10 md:w-12 md:h-12 magic-gradient rounded-full flex items-center justify-center bounce-gentle flex-shrink-0">
                 <Music className="w-5 h-5 md:w-6 md:h-6 text-white" />
               </div>

@@ -16,14 +16,14 @@ function App() {
     <>
       <Layout>
         <Routes>
+          <Route path="/albums" element={<Albums />} />
+          <Route path="/tracks" element={<Tracks />} />
+          <Route path="/characters" element={<Characters />} />
+          <Route path="/activities" element={<Activities />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/karaoke" element={<Karaoke />} />
           <Route path="/" element={<Home />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/Albums" element={<Albums />} />
-          <Route path="/Tracks" element={<Tracks />} />
-          <Route path="/Characters" element={<Characters />} />
-          <Route path="/Activities" element={<Activities />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Karaoke" element={<Karaoke />} />
+          <Route path="*" element={<div style={{padding: 40, textAlign: 'center', fontSize: 32}}>404 - Page non trouvée</div>} />
         </Routes>
       </Layout>
       <Toaster />

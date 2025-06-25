@@ -236,6 +236,42 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* SEO Navigation Footer */}
+      <footer className="py-12 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Découvrir</h3>
+              <ul className="space-y-2">
+                <li><Link to={createPageUrl("Albums")} className="text-gray-600 hover:text-purple-600 transition-colors">Albums musicaux</Link></li>
+                <li><Link to={createPageUrl("Tracks")} className="text-gray-600 hover:text-purple-600 transition-colors">Chansons individuelles</Link></li>
+                <li><Link to={createPageUrl("Karaoke")} className="text-gray-600 hover:text-purple-600 transition-colors">Karaoké interactif</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Explorer</h3>
+              <ul className="space-y-2">
+                <li><Link to={createPageUrl("Characters")} className="text-gray-600 hover:text-purple-600 transition-colors">Personnages</Link></li>
+                <li><Link to={createPageUrl("Activities")} className="text-gray-600 hover:text-purple-600 transition-colors">Activités ludiques</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">À propos</h3>
+              <ul className="space-y-2">
+                <li><Link to={createPageUrl("About")} className="text-gray-600 hover:text-purple-600 transition-colors">Notre projet</Link></li>
+                <li><Link to="/" className="text-gray-600 hover:text-purple-600 transition-colors">Accueil</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Contact</h3>
+              <p className="text-gray-600 text-sm">
+                Découvrez la musique éducative pour enfants qui réinvente les classiques de la littérature française.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

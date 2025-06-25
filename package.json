@@ -3,10 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://www.pimentao.fr",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "cpy public/sitemap.xml public/robots.txt public/_headers dist/",
+    "postbuild": "cpy public/sitemap.xml public/robots.txt public/_headers public/404.html public/_redirects dist/ && cpy dist/index.html dist/ --rename=404.html",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
