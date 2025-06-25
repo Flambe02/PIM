@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.pimentao.fr/</loc></url>
-  <url><loc>https://www.pimentao.fr/#/Albums</loc></url>
-  <url><loc>https://www.pimentao.fr/#/Characters</loc></url>
-  <url><loc>https://www.pimentao.fr/#/Activities</loc></url>
+  <url><loc>https://www.pimentao.fr/albums</loc></url>
+  <url><loc>https://www.pimentao.fr/characters</loc></url>
+  <url><loc>https://www.pimentao.fr/activities</loc></url>
 </urlset>
