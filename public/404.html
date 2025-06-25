@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Redirection...</title>
-    <script>
-      // Redirige vers /#/[pathname] pour forcer le routage SPA
-      var path = location.pathname.replace(/^\//, '');
-      var search = location.search || '';
-      var hash = location.hash || '';
-      location.replace('/#/' + path + search + hash);
+    <meta charset="utf-8">
+    <title>Pimentão en Chansons - Redirection...</title>
+    <script type="text/javascript">
+      // Récupère le chemin de l'URL demandée (ex: "/albums")
+      var path = window.location.pathname;
+
+      // Construit l'URL de redirection avec le format HashRouter.
+      // Par exemple, transforme "/albums" en "/#/albums"
+      var newUrl = '/#' + path.substring(1);
+
+      // Redirige l'utilisateur vers la bonne page à l'intérieur de l'application
+      window.location.replace(newUrl);
     </script>
   </head>
   <body>
-    <p>Redirection...</p>
+    <p>Si vous n'êtes pas redirigé automatiquement, <a href="/">veuillez cliquer ici pour retourner à l'accueil</a>.</p>
   </body>
 </html> 

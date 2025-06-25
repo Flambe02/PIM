@@ -2,43 +2,43 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.pimentao.fr/</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/albums</loc>
-    <lastmod>2025-01-27</lastmod>
+    <loc>https://www.pimentao.fr/#/albums</loc>
+    <lastmod>2025-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/tracks</loc>
-    <lastmod>2025-01-27</lastmod>
+    <loc>https://www.pimentao.fr/#/tracks</loc>
+    <lastmod>2025-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/characters</loc>
-    <lastmod>2025-01-27</lastmod>
+    <loc>https://www.pimentao.fr/#/characters</loc>
+    <lastmod>2025-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/activities</loc>
-    <lastmod>2025-01-27</lastmod>
+    <loc>https://www.pimentao.fr/#/activities</loc>
+    <lastmod>2025-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/karaoke</loc>
-    <lastmod>2025-01-27</lastmod>
+    <loc>https://www.pimentao.fr/#/karaoke</loc>
+    <lastmod>2025-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/about</loc>
-    <lastmod>2025-01-27</lastmod>
+    <loc>https://www.pimentao.fr/#/about</loc>
+    <lastmod>2025-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
