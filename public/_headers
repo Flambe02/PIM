@@ -6,6 +6,7 @@
   X-Forwarded-Proto: https
   X-Robots-Tag: all
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Content-Security-Policy: upgrade-insecure-requests;
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
