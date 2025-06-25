@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "cpy public/sitemap.xml public/robots.txt dist/",
+    "postbuild": "cpy public/sitemap.xml public/robots.txt public/_headers dist/",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
@@ -53,17 +53,24 @@
     "react": "^18.2.0",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^7.6.2",
+    "tailwind-merge": "^3.3.1",
     "zod": "^3.24.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
     "@flydotio/dockerfile": "^0.7.8",
     "@types/node": "^22.13.5",
+    "@vitejs/plugin-react": "^4.5.2",
+    "autoprefixer": "^10.4.21",
+    "cpy-cli": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.18",
+    "gh-pages": "^6.3.0",
     "globals": "^15.14.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
-    "vite": "^6.1.0",
-    "cpy-cli": "^5.0.0"
+    "tailwindcss-animate": "^1.0.7",
+    "terser": "^5.43.1",
+    "vite": "^6.1.0"
   }
 }

@@ -22,4 +22,32 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    // Optimisations de performance
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
+        },
+      },
+    },
+    // Optimisation des assets
+    assetsInlineLimit: 4096, // Inline les petits assets
+    chunkSizeWarningLimit: 1000,
+  },
+  // Optimisations de développement
+  server: {
+    headers: {
+      'Cache-Control': 'public, max-age=31536000',
+    },
+  },
 })
