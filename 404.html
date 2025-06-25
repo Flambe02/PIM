@@ -2,14 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=/index.html" />
-    <title>Page not found – Redirecting...</title>
+    <title>Redirection...</title>
+    <script>
+      // Redirige vers /#/[pathname] pour forcer le routage SPA
+      var path = location.pathname.replace(/^\//, '');
+      var search = location.search || '';
+      var hash = location.hash || '';
+      location.replace('/#/' + path + search + hash);
+    </script>
   </head>
   <body>
-    <p>Redirecting to the homepage...</p>
-    <script>
-      // Fallback for SPA routing
-      window.location.href = '/index.html';
-    </script>
+    <p>Redirection...</p>
   </body>
 </html> 
