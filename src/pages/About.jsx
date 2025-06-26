@@ -45,6 +45,19 @@ export default function About() {
               <p>
                 De Perrault à La Fontaine, en passant par Molière, chaque album est une porte d'entrée vers un univers riche en poésie, en sagesse et en émotions. Nous créons des mélodies joyeuses et des arrangements soignés pour que l'apprentissage devienne un plaisir partagé en famille.
               </p>
+              <Card className="border-none shadow-lg bg-gradient-to-br from-yellow-50 to-pink-50 mt-8">
+                <CardContent className="p-6 flex items-start gap-4">
+                  <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
+                    <Star className="w-6 h-6 text-yellow-500" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-yellow-700 mb-2">Le créateur derrière le projet</h4>
+                    <p className="text-gray-700 leading-relaxed" style={{ lineHeight: '1.6' }}>
+                      Je m'appelle Florent Lambert. J'ai imaginé ce projet par passion, avec la conviction profonde que la musique est le plus beau vecteur d'émotions et d'apprentissage. Mon objectif est de proposer des contenus de grande qualité, qui allient exigence artistique et joie de la découverte.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
           
@@ -128,35 +141,6 @@ export default function About() {
               </Card>
             ))}
           </div>
-        </div>
-
-        {/* Contact/Info Section */}
-        <div className="text-center">
-          <Card className="border-none shadow-lg bg-gradient-to-br from-purple-50 to-pink-50">
-            <CardContent className="p-8">
-              <h2 className="text-3xl font-bold text-gradient mb-4">Rejoignez Notre Aventure Musicale</h2>
-              <p className="text-xl text-gray-600 mb-6 max-w-2xl mx-auto">
-                Merci de faire partie de notre projet. Ensemble, créons des souvenirs musicaux inoubliables pour les enfants.
-              </p>
-              <div className="flex justify-center gap-4">
-                <Link to={createPageUrl("Albums")} className="inline-block">
-                  <Badge className="bg-purple-500 text-white px-4 py-2 text-lg hover:bg-purple-600 transition-colors cursor-pointer hover:scale-105">
-                    Contes
-                  </Badge>
-                </Link>
-                <Link to={createPageUrl("Albums")} className="inline-block">
-                  <Badge className="bg-pink-500 text-white px-4 py-2 text-lg hover:bg-pink-600 transition-colors cursor-pointer hover:scale-105">
-                    Fables
-                  </Badge>
-                </Link>
-                <Link to={createPageUrl("Albums")} className="inline-block">
-                  <Badge className="bg-blue-500 text-white px-4 py-2 text-lg hover:bg-blue-600 transition-colors cursor-pointer hover:scale-105">
-                    Théâtre
-                  </Badge>
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -63,6 +63,8 @@ export default function Albums() {
     </Button>
   );
 
+  const [introPage, setIntroPage] = useState(1);
+
   return (
     <div className="min-h-screen py-8">
       <div className="max-w-6xl mx-auto px-4">
@@ -71,9 +73,32 @@ export default function Albums() {
           <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-4">
             Nos Albums Musicaux
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Une collection d'albums enchanteurs qui transforment l'apprentissage en aventure musicale
-          </p>
+          <div className="album-introduction bg-white/80 shadow rounded-xl py-5 px-4 md:px-8 mx-auto max-w-6xl mb-6 border border-purple-100">
+            <h2 className="text-lg md:text-xl font-semibold text-purple-600 mb-3">Une collection d'albums pour grandir en musique</h2>
+            <div className="max-w-3xl mx-auto">
+              {introPage === 1 ? (
+                <p className="text-base text-gray-700 leading-normal mb-2">
+                  Bienvenue dans le cœur musical de Pimentão en Chansons ! Chaque album que vous découvrirez ici est bien plus qu'une simple compilation de titres : c'est une invitation au voyage, une porte ouverte sur un monde où la poésie des mots rencontre la magie des notes. Notre collection est pensée pour accompagner les enfants à chaque étape de leur éveil, en transformant les grands classiques de la littérature en aventures sonores inoubliables.
+                </p>
+              ) : (
+                <>
+                  <p className="text-base text-gray-700 leading-normal mb-2">
+                    Plongez avec nous dans les trésors de notre patrimoine culturel ! Nous avons soigneusement mis en musique les contes intemporels de Charles Perrault, les sages fables de Jean de La Fontaine, et bien d'autres récits qui ont bercé des générations. Avec des arrangements modernes, des mélodies entraînantes et des interprétations pleines de vie, chaque chanson est conçue pour captiver l'attention des plus jeunes, stimuler leur imagination et leur transmettre, tout en douceur, les belles leçons de la vie.
+                  </p>
+                  <p className="text-base text-gray-700 leading-normal">
+                    Nous vous invitons maintenant à explorer chaque univers. Cliquez sur la pochette d'un album pour découvrir la liste de ses chansons, faire la connaissance des personnages attachants qui les peuplent, et pourquoi pas, pousser la chansonnette en famille ! L'aventure musicale ne fait que commencer.
+                  </p>
+                </>
+              )}
+            </div>
+            <div className="flex justify-center gap-2 mt-4">
+              <button onClick={() => setIntroPage(1)} aria-label="Page 1" className={`w-3 h-3 rounded-full border border-purple-400 transition ${introPage === 1 ? 'bg-purple-500' : 'bg-white'}`}></button>
+              <button onClick={() => setIntroPage(2)} aria-label="Page 2" className={`w-3 h-3 rounded-full border border-purple-400 transition ${introPage === 2 ? 'bg-purple-500' : 'bg-white'}`}></button>
+            </div>
+          </div>
+          <div className="w-full flex justify-center mb-10">
+            <div className="h-1 w-32 bg-gradient-to-r from-purple-300 via-pink-200 to-blue-200 rounded-full opacity-70"></div>
+          </div>
         </div>
 
         {/* Albums Grid */}

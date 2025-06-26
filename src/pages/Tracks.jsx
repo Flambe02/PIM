@@ -15,6 +15,18 @@ export default function Tracks() {
     loadTracks();
   }, []);
 
+  // SEO Optimization - Mise à jour des balises meta
+  useEffect(() => {
+    // Modification du titre de la page
+    document.title = "Nos Chansons pour Enfants à Écouter - Pimentão en Chansons";
+    
+    // Mise à jour de la meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Explorez la liste complète des chansons pour enfants par Pimentão. Des créations originales, éducatives et des classiques revisités pour l\'éveil musical de 0 à 7 ans.');
+    }
+  }, []);
+
   const loadTracks = async () => {
     try {
       const data = await Track.list("track_number");
@@ -78,10 +90,10 @@ export default function Tracks() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-4">
-            Nos Chansons
+            Toutes nos chansons pour enfants
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Découvrez toutes nos créations musicales et écoutez-les directement sur Spotify
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+            Bienvenue dans l'univers musical de Pimentão ! Nous créons avec passion des chansons pour enfants bienveillantes et intelligentes, parfaites pour apprendre, danser, ou pour le rituel du coucher. Découvrez ci-dessous toutes nos créations disponibles en écoute.
           </p>
         </div>
 

@@ -7,6 +7,7 @@ import { createPageUrl } from "@/utils";
 
 export default function Characters() {
   const [isLoading, setIsLoading] = useState(true);
+  const [introPage, setIntroPage] = useState(1);
 
   useEffect(() => {
     // Simuler un chargement pour afficher le spinner
@@ -117,9 +118,34 @@ export default function Characters() {
           <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-4">
             Nos Personnages Enchantés
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Découvrez les héros hauts en couleur de nos albums de contes et de théâtre !
-          </p>
+          <div className="character-introduction bg-white/80 shadow rounded-xl py-5 px-4 md:px-8 mx-auto max-w-6xl mb-6 border border-purple-100">
+            <h2 className="text-lg md:text-xl font-semibold text-purple-600 mb-3">Rencontrez les héros de nos chansons</h2>
+            <div className="max-w-3xl mx-auto">
+              {introPage === 1 ? (
+                <>
+                  <p className="text-base text-gray-700 leading-normal mb-2">
+                    Bienvenue dans la galerie officielle des personnages de Pimentão en Chansons ! Plus que de simples figures de contes, ils sont le cœur et l'âme de nos récits musicaux. Chaque personnage, du plus malicieux au plus courageux, a été dessiné et interprété pour devenir un véritable compagnon de jeu et d'apprentissage pour vos enfants.
+                  </p>
+                  <p className="text-base text-gray-700 leading-normal mb-2">
+                    Explorez cette joyeuse troupe et retrouvez les visages emblématiques qui peuplent notre univers. Vous croiserez le rusé Chat Botté, les animaux pleins de sagesse des Fables de La Fontaine, les héros intrépides des contes de Perrault, et bien sûr, notre mascotte Pimentão, toujours prêt pour une nouvelle aventure !
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="text-base text-gray-700 leading-normal mb-2">
+                    Chacun porte en lui une histoire unique et une leçon de vie à partager en musique.
+                  </p>
+                  <p className="text-base text-gray-700 leading-normal">
+                    Cliquez sur le portrait de chaque personnage pour lire sa biographie, découvrir ses traits de caractère, et retrouver toutes les chansons dans lesquelles il tient la vedette. C'est l'occasion parfaite de mettre un visage sur les voix et de prolonger la magie des histoires bien au-delà de la dernière note.
+                  </p>
+                </>
+              )}
+            </div>
+            <div className="flex justify-center gap-2 mt-4">
+              <button onClick={() => setIntroPage(1)} aria-label="Page 1" className={`w-3 h-3 rounded-full border border-purple-400 transition ${introPage === 1 ? 'bg-purple-500' : 'bg-white'}`}></button>
+              <button onClick={() => setIntroPage(2)} aria-label="Page 2" className={`w-3 h-3 rounded-full border border-purple-400 transition ${introPage === 2 ? 'bg-purple-500' : 'bg-white'}`}></button>
+            </div>
+          </div>
         </div>
 
         {/* Characters Grid */}

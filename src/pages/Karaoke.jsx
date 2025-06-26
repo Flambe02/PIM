@@ -13,6 +13,7 @@ export default function Karaoke() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedTrack, setSelectedTrack] = useState(null);
   const [showVideo, setShowVideo] = useState(false);
+  const [introPage, setIntroPage] = useState(1);
 
   useEffect(() => {
     // Les données sont maintenant chargées depuis le fichier local
@@ -72,9 +73,31 @@ export default function Karaoke() {
           <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-4">
             🎤 Session Karaoké 🎤
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Chantez vos chansons préférées et devenez la star !
-          </p>
+          <div className="karaoke-introduction bg-white/80 shadow rounded-xl py-5 px-4 md:px-8 mx-auto max-w-6xl mb-6 border border-purple-100">
+            <h2 className="text-lg md:text-xl font-semibold text-purple-600 mb-3">À vous de chanter ! La scène est ouverte</h2>
+            <div className="max-w-3xl mx-auto">
+              {introPage === 1 ? (
+                <>
+                  <p className="text-base text-gray-700 leading-normal mb-2">
+                    Poussez les meubles, montez le son et préparez-vous à chanter en chœur ! Notre section Karaoké est l'endroit parfait pour des moments de pure joie en famille. Bien plus qu'un simple divertissement, chanter sur ses mélodies préférées est une formidable manière pour les enfants d'exprimer leurs émotions, de gagner en confiance et d'améliorer leur lecture et leur élocution sans même s'en rendre compte.
+                  </p>
+                  <p className="text-base text-gray-700 leading-normal mb-2">
+                    Toutes nos chansons sont disponibles ici en version instrumentale, avec des paroles qui défilent à l'écran, faciles à suivre pour les chanteurs de tous âges. C'est l'occasion rêvée de devenir la star de son propre spectacle, de réinterpréter les aventures de nos personnages et de créer des souvenirs mémorables.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="text-base text-gray-700 leading-normal mb-2">
+                    Alors, que vous prépariez une fête d'anniversaire, une après-midi pluvieuse ou simplement une session de chant improvisée dans le salon, nos karaokés sont là pour vous accompagner. Choisissez une chanson, prenez un micro (ou une brosse à cheveux !) et que le spectacle commence !
+                  </p>
+                </>
+              )}
+            </div>
+            <div className="flex justify-center gap-2 mt-4">
+              <button onClick={() => setIntroPage(1)} aria-label="Page 1" className={`w-3 h-3 rounded-full border border-purple-400 transition ${introPage === 1 ? 'bg-purple-500' : 'bg-white'}`}></button>
+              <button onClick={() => setIntroPage(2)} aria-label="Page 2" className={`w-3 h-3 rounded-full border border-purple-400 transition ${introPage === 2 ? 'bg-purple-500' : 'bg-white'}`}></button>
+            </div>
+          </div>
         </div>
 
         {/* Tracks Selection */}

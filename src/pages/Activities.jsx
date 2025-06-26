@@ -25,6 +25,7 @@ export default function Activities() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [showQuiz, setShowQuiz] = useState(false); // Added state for quiz modal
+  const [introPage, setIntroPage] = useState(1);
 
   useEffect(() => {
     // Simuler un temps de chargement
@@ -125,9 +126,34 @@ export default function Activities() {
           <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-4">
             Activités et Jeux Amusants
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Des aventures interactives qui donnent vie à notre univers musical !
-          </p>
+          <div className="activities-introduction bg-white/80 shadow rounded-xl py-5 px-4 md:px-8 mx-auto max-w-6xl mb-6 border border-purple-100">
+            <h2 className="text-lg md:text-xl font-semibold text-purple-600 mb-3">Prolongez l'aventure avec nos activités créatives !</h2>
+            <div className="max-w-3xl mx-auto">
+              {introPage === 1 ? (
+                <>
+                  <p className="text-base text-gray-700 leading-normal mb-2">
+                    L'écoute est un merveilleux début, mais l'apprentissage devient inoubliable quand il passe par le jeu. C'est pourquoi nous avons créé cet espace d'activités, conçu pour permettre aux enfants de prolonger la magie de nos chansons. Chaque jeu, quiz ou coloriage est une nouvelle occasion d'explorer, de créer et de grandir tout en s'amusant.
+                  </p>
+                  <p className="text-base text-gray-700 leading-normal mb-2">
+                    Ici, l'imagination est reine ! Nos activités sont directement inspirées des personnages et des histoires de nos albums. Elles sont pensées pour stimuler la créativité, affiner la mémoire et renforcer les connaissances de manière ludique.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="text-base text-gray-700 leading-normal mb-2">
+                    Que ce soit en testant sa connaissance des contes avec un quiz ou en donnant vie à ses héros préférés avec des crayons de couleur, votre enfant continue de tisser un lien unique avec notre univers.
+                  </p>
+                  <p className="text-base text-gray-700 leading-normal">
+                    Choisissez une activité ci-dessous et lancez-vous ! C'est le moment de partager un moment de complicité en famille, de rire et de voir les leçons de nos chansons prendre forme sous les yeux et les mains de vos enfants.
+                  </p>
+                </>
+              )}
+            </div>
+            <div className="flex justify-center gap-2 mt-4">
+              <button onClick={() => setIntroPage(1)} aria-label="Page 1" className={`w-3 h-3 rounded-full border border-purple-400 transition ${introPage === 1 ? 'bg-purple-500' : 'bg-white'}`}></button>
+              <button onClick={() => setIntroPage(2)} aria-label="Page 2" className={`w-3 h-3 rounded-full border border-purple-400 transition ${introPage === 2 ? 'bg-purple-500' : 'bg-white'}`}></button>
+            </div>
+          </div>
         </div>
 
         {/* Category Filter */}
