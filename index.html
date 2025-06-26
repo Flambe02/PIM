@@ -47,69 +47,74 @@
       gtag('config', 'G-PYDPHP42W8');
     </script>
 
-    <!-- Données Structurées JSON-LD pour l'organisation -->
+    <!-- Données Structurées JSON-LD unifiées -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Pimentão en Chansons",
-      "url": "https://www.pimentao.fr",
-      "logo": "https://www.pimentao.fr/logo.png"
-    }
-    </script>
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "MusicGroup"],
+  "name": "Pimentão en Chansons",
+  "url": "https://www.pimentao.fr/",
+  "logo": "https://www.pimentao.fr/logo.png",
+  "description": "Les classiques de la littérature française réinventés en musique pour enfants. Des albums éducatifs et ludiques pour apprendre en s'amusant.",
+  "image": "https://www.pimentao.fr/preview.jpg",
+  
+  "sameAs": [
+    "https://open.spotify.com/intl-fr/artist/1YKxys4gkBjyOON3bKexXj?si=y_r0E1X0S1eKvy9w7JHy0A",
+    "https://music.apple.com/us/artist/the-piment%C3%A3o-rouge/1785205800",
+    "https://music.youtube.com/channel/UCMO7Nf7SG10wvJWlNDFx11Q?si=9OTXBAun0R0DYJZQ",
+    "https://www.shazam.com/en-us/artist/the-piment%C3%A3o-rouge-project/1791441717",
+    "URL_DE_VOTRE_PROFIL_FACEBOOK_ICI",
+    "URL_DE_VOTRE_PROFIL_INSTAGRAM_ICI"
+  ],
 
-    <!-- Données Structurées JSON-LD pour le SEO -->
-    <script type="application/ld+json">
+  "album": [
     {
-      "@context": "https://schema.org",
-      "@type": "MusicGroup",
-      "name": "Pimentão en Chansons",
-      "url": "https://www.pimentao.fr/",
-      "description": "Les classiques de la littérature française réinventés en musique pour enfants. Des albums éducatifs et ludiques pour apprendre en s'amusant.",
-      "image": "https://www.pimentao.fr/preview.jpg",
-      "album": [
-        {
-          "@type": "MusicAlbum",
-          "name": "Il était une chanson",
-          "byArtist": {
-            "@type": "MusicGroup",
-            "name": "Pimentão en Chansons"
-          },
-          "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/e3d74965a_PochetteAlbum.png",
-          "numTracks": 11
-        },
-        {
-          "@type": "MusicAlbum",
-          "name": "Les Fables en Chantant",
-          "byArtist": {
-            "@type": "MusicGroup",
-            "name": "Pimentão en Chansons"
-          },
-          "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/c8c4d1a1d_PochetteAlbumFables.jpg",
-          "numTracks": 12
-        },
-        {
-          "@type": "MusicAlbum",
-          "name": "Molière en Chansons",
-          "byArtist": {
-            "@type": "MusicGroup",
-            "name": "Pimentão en Chansons"
-          },
-          "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/bed400a8b_pochette1.png",
-          "numTracks": 15
-        }
-      ]
-    }
-    </script>
-
-    <!-- Données Structurées JSON-LD pour le site web -->
-    <script type="application/ld+json">
+      "@type": "MusicAlbum",
+      "name": "Il était une chanson",
+      "sameAs": [
+          "https://open.spotify.com/intl-fr/album/2M7OKkadyPnxeu9mIUzBl1?si=N4tZ1tz-TrypdfbyLP4LyA",
+          "https://music.apple.com/us/album/il-%C3%A9tait-une-chanson-contes-de-perrault-en-musique/1805395995",
+          "https://music.youtube.com/playlist?list=OLAK5uy_nI6lIN7ixBXFM3uWtKatp-6I1lF680G_E"
+      ],
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Pimentão en Chansons"
+      },
+      "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/e3d74965a_PochetteAlbum.png",
+      "numTracks": 11
+    },
     {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Pimentão en Chansons",
-      "url": "https://www.pimentao.fr"
+      "@type": "MusicAlbum",
+      "name": "Les Fables en Chantant",
+      "sameAs": [
+          "https://open.spotify.com/intl-fr/album/2sYatlscoPQhWLuVGfQAO6?si=IZGs-XmJRe6_f7r9mZpkfQ",
+          "https://music.apple.com/us/album/les-fables-de-la-fontaine-en-chantant/1785950695",
+          "https://music.youtube.com/playlist?list=OLAK5uy_lFpMxmSvzn5CjgaFMMTutpYs95AM5GOGM"
+      ],
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Pimentão en Chansons"
+      },
+      "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/c8c4d1a1d_PochetteAlbumFables.jpg",
+      "numTracks": 12
+    },
+    {
+      "@type": "MusicAlbum",
+      "name": "Molière en Chansons",
+      "sameAs": [
+          "https://open.spotify.com/intl-fr/album/1ufjgwYGfUZxPA7IxnVl39?si=0E0s91rJR4y1Azruldsekg",
+          "https://music.apple.com/us/album/moli%C3%A8re-en-chansons/1808068128",
+          "https://music.youtube.com/playlist?list=OLAK5uy_lhW314HOpImF0_Ag5tkxhP_CI19JEfG9U&si=yTITYTQtZbw-u_2b"
+      ],
+      "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Pimentão en Chansons"
+      },
+      "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/bed400a8b_pochette1.png",
+      "numTracks": 15
     }
+  ]
+}
     </script>
     <script type="module" crossorigin src="/assets/index-DQgiPTis.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/vendor-DEQ385Nk.js">
