@@ -1,98 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.pimentao.fr/</loc>
-    <lastmod>2025-06-25</lastmod>
+    <lastmod>2025-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.pimentao.fr/#/albums</loc>
-    <lastmod>2025-06-25</lastmod>
+    <lastmod>2025-06-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.pimentao.fr/#/tracks</loc>
-    <lastmod>2025-06-25</lastmod>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.pimentao.fr/#/karaoke</loc>
+    <lastmod>2025-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.pimentao.fr/#/characters</loc>
-    <lastmod>2025-06-25</lastmod>
+    <lastmod>2025-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.pimentao.fr/#/activities</loc>
-    <lastmod>2025-06-25</lastmod>
+    <lastmod>2025-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/#/karaoke</loc>
-    <lastmod>2025-06-25</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.pimentao.fr/#/about</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.pimentao.fr/#/blog</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/#/about</loc>
-    <lastmod>2025-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.pimentao.fr/#/blog/5-chansons-douces-pour-le-coucher</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
-</urlset>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["Organization", "MusicGroup"],
-  "name": "Pimentão en Chansons",
-  "alternateName": [
-    "The Pimentão Rouge",
-    "The Pimentão Rouge Project"
-  ],
-  "url": "https://www.pimentao.fr/",
-  "logo": "https://www.pimentao.fr/logo.png",
-  "image": "https://www.pimentao.fr/logo.png",
-  "description": "Pimentão en Chansons est un projet musical éducatif proposant des albums originaux inspirés des contes de Perrault, des Fables de La Fontaine et de Molière, disponibles sur toutes les plateformes de streaming.",
-  "sameAs": [
-    "https://open.spotify.com/intl-fr/artist/1YKxys4gkBjyOON3bKexXj?si=y_r0E1X0S1eKvy9w7JHy0A",
-    "https://music.apple.com/us/artist/the-piment%C3%A3o-rouge/1785205800",
-    "https://music.youtube.com/channel/UCMO7Nf7SG10wvJWlNDFx11Q?si=9OTXBAun0R0DYJZQ",
-    "https://www.shazam.com/en-us/artist/the-piment%C3%A3o-rouge-project/1791441717",
-    "https://www.facebook.com/PLACEHOLDER",
-    "https://www.instagram.com/PLACEHOLDER"
-  ],
-  "album": [
-    {
-      "@type": "MusicAlbum",
-      "name": "Il était une chanson",
-      "sameAs": [
-        "https://open.spotify.com/intl-fr/album/2M7OKkadyPnxeu9mIUzBl1?si=N4tZ1tz-TrypdfbyLP4LyA",
-        "https://music.apple.com/us/album/il-%C3%A9tait-une-chanson-contes-de-perrault-en-musique/1805395995",
-        "https://music.youtube.com/playlist?list=OLAK5uy_nI6lIN7ixBXFM3uWtKatp-6I1lF680G_E"
-      ]
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "Les Fables en Chantant",
-      "sameAs": [
-        "https://open.spotify.com/intl-fr/album/2sYatlscoPQhWLuVGfQAO6?si=IZGs-XmJRe6_f7r9mZpkfQ",
-        "https://music.apple.com/us/album/les-fables-de-la-fontaine-en-chantant/1785950695",
-        "https://music.youtube.com/playlist?list=OLAK5uy_lFpMxmSvzn5CjgaFMMTutpYs95AM5GOGM"
-      ]
-    },
-    {
-      "@type": "MusicAlbum",
-      "name": "Molière en Chansons",
-      "sameAs": [
-        "https://open.spotify.com/intl-fr/album/1ufjgwYGfUZxPA7IxnVl39?si=0E0s91rJR4y1Azruldsekg",
-        "https://music.apple.com/us/album/moli%C3%A8re-en-chansons/1808068128",
-        "https://music.youtube.com/playlist?list=OLAK5uy_lhW314HOpImF0_Ag5tkxhP_CI19JEfG9U&si=yTITYTQtZbw-u_2b"
-      ]
-    }
-  ]
-}
-</script>
+  <url>
+    <loc>https://www.pimentao.fr/#/blog/apprendre-en-samusant-comptines-langage</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pimentao.fr/#/blog/playlist-ideale-voyage-voiture</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pimentao.fr/#/blog/moliere-pour-les-petits</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pimentao.fr/#/blog/fables-la-fontaine-lecons-de-vie</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset> 
