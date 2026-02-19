@@ -7,75 +7,81 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/#/albums</loc>
+    <loc>https://www.pimentao.fr/albums</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/#/tracks</loc>
+    <loc>https://www.pimentao.fr/tracks</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/#/karaoke</loc>
+    <loc>https://www.pimentao.fr/karaoke</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/#/characters</loc>
+    <loc>https://www.pimentao.fr/characters</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/#/activities</loc>
+    <loc>https://www.pimentao.fr/activities</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/#/about</loc>
+    <loc>https://www.pimentao.fr/about</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/#/blog</loc>
+    <loc>https://www.pimentao.fr/blog</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/#/blog/5-chansons-douces-pour-le-coucher</loc>
+    <loc>https://www.pimentao.fr/blog/top-20-comptines-incontournables</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/#/blog/apprendre-en-samusant-comptines-langage</loc>
+    <loc>https://www.pimentao.fr/blog/5-chansons-douces-pour-le-coucher</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/#/blog/playlist-ideale-voyage-voiture</loc>
+    <loc>https://www.pimentao.fr/blog/apprendre-en-samusant-comptines-langage</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/#/blog/moliere-pour-les-petits</loc>
+    <loc>https://www.pimentao.fr/blog/playlist-ideale-voyage-voiture</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.pimentao.fr/#/blog/fables-la-fontaine-lecons-de-vie</loc>
+    <loc>https://www.pimentao.fr/blog/moliere-pour-les-petits</loc>
     <lastmod>2025-06-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
-</urlset> 
+  <url>
+    <loc>https://www.pimentao.fr/blog/fables-la-fontaine-lecons-de-vie</loc>
+    <lastmod>2025-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

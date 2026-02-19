@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>Pimentão en Chansons - Redirection...</title>
+    <title>Pimentão en Chansons</title>
     <script type="text/javascript">
-      var path = window.location.pathname;
-      var newUrl = '/#' + path.substring(1);
-      window.location.replace(newUrl);
+      // Redirection SPA pour GitHub Pages (BrowserRouter)
+      // Encode le chemin dans un paramètre query pour que index.html puisse le restaurer
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1).join('/') + '/?/' +
+        l.pathname.slice(1).replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
     </script>
   </head>
   <body>
-    <p>Si vous n'êtes pas redirigé automatiquement, <a href="/">veuillez cliquer ici pour retourner à l'accueil</a>.</p>
+    <p>Redirection en cours...</p>
   </body>
-</html> 
+</html>
