@@ -21,10 +21,12 @@ export default function Home() {
       <section className="relative overflow-hidden min-h-[80vh] flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
+          <img
             src="/preview.jpg"
             alt="Pimentão en Chansons - illustration"
             className="w-full h-full object-cover"
+            fetchpriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/80 via-pink-500/70 to-blue-500/80"></div>
         </div>
@@ -129,10 +131,12 @@ export default function Home() {
             ].map((album, index) => (
               <Card key={index} className="border-none shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden group">
                 <div className="relative h-64 overflow-hidden">
-                  <img 
+                  <img
                     src={album.image}
                     alt={`Pochette de l'album ${album.title} - ${album.subtitle}`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
