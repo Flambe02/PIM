@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -67,12 +68,18 @@ export default function Albums() {
 
   return (
     <div className="min-h-screen py-8">
+      <Helmet>
+        <title>Albums de Musique pour Enfants | Pimentão en Chansons</title>
+        <meta name="description" content="3 albums éducatifs pour enfants : Il était une chanson (Perrault), Les Fables en Chantant (La Fontaine), Molière en Chansons. Disponibles sur Spotify, Apple Music, YouTube Music." />
+        <link rel="canonical" href="https://www.pimentao.fr/albums" />
+        <meta property="og:title" content="Albums de Musique pour Enfants | Pimentão en Chansons" />
+        <meta property="og:description" content="3 albums éducatifs pour enfants : Contes de Perrault, Fables de La Fontaine et Molière en chansons. Écouter sur toutes les plateformes de streaming." />
+        <meta property="og:url" content="https://www.pimentao.fr/albums" />
+      </Helmet>
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-4">
-            Nos Albums Musicaux
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gradient mb-8" style={{textAlign: 'center'}}>Albums musicaux pour enfants</h1>
           <div className="album-introduction bg-white/80 shadow rounded-xl py-5 px-4 md:px-8 mx-auto max-w-6xl mb-6 border border-purple-100">
             <h2 className="text-lg md:text-xl font-semibold text-purple-600 mb-3">Une collection d'albums pour grandir en musique</h2>
             <div className="max-w-3xl mx-auto">

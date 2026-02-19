@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { createPageUrl } from "@/utils";
 import { Play, Music, Heart, Star, Download, Users, Disc3, Mic } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,14 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Pimentão en Chansons : Musique pour Enfants & Karaokés</title>
+        <meta name="description" content="Découvrez 3 albums de musique pour enfants inspirés des classiques : Perrault, La Fontaine et Molière. Chansons, karaoké et activités éducatives en famille." />
+        <link rel="canonical" href="https://www.pimentao.fr/" />
+        <meta property="og:title" content="Pimentão en Chansons | Albums musicaux pour enfants" />
+        <meta property="og:description" content="Découvrez 3 albums de musique pour enfants inspirés des classiques : Perrault, La Fontaine et Molière. Chansons, karaoké et activités éducatives en famille." />
+        <meta property="og:url" content="https://www.pimentao.fr/" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-[80vh] flex items-center">
         {/* Background Image */}

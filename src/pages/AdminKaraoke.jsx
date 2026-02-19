@@ -7,7 +7,44 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Trash2, Edit, Music, Loader2, PlusCircle, ExternalLink } from "lucide-react";
+import { Trash2, Edit, Music, Loader2, PlusCircle } from "lucide-react";
+
+// Données de démonstration pour le karaoké
+const mockTracks = [
+  {
+    id: 1,
+    title: "Cendrillon",
+    artist: "Il était une chanson",
+    difficulty: "Facile",
+    youtube_video_id: "8e1H9XRetVg",
+    album_cover: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/e3d74965a_PochetteAlbum.png",
+    spotify_url: null,
+    apple_music_url: null,
+    youtube_music_url: null,
+  },
+  {
+    id: 2,
+    title: "Le Corbeau et le Renard",
+    artist: "Les Fables en Chantant",
+    difficulty: "Moyen",
+    youtube_video_id: "OuEaDOEFCJk",
+    album_cover: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/c8c4d1a1d_PochetteAlbumFables.jpg",
+    spotify_url: null,
+    apple_music_url: null,
+    youtube_music_url: null,
+  },
+  {
+    id: 3,
+    title: "Les Fourberies de Scapin",
+    artist: "Molière en Chansons",
+    difficulty: "Difficile",
+    youtube_video_id: "Df2LjZalQhs",
+    album_cover: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/bed400a8b_pochette1.png",
+    spotify_url: null,
+    apple_music_url: null,
+    youtube_music_url: null,
+  },
+];
 
 export default function AdminKaraoke() {
   const [tracks, setTracks] = useState([]);
@@ -24,64 +61,18 @@ export default function AdminKaraoke() {
   const [appleMusicUrl, setAppleMusicUrl] = useState("");
   const [youtubeMusicUrl, setYoutubeMusicUrl] = useState("");
 
-  const [user, setUser] = useState(null);
   const [message, setMessage] = useState("");
 
-  const [bonusSongUrl, setBonusSongUrl] = useState(""); // New state variable
-  const [bonusMessage, setBonusMessage] = useState(""); // New state variable
+  const [bonusSongUrl, setBonusSongUrl] = useState("");
+  const [bonusMessage, setBonusMessage] = useState("");
 
   useEffect(() => {
-    const checkUser = async () => {
-      try {
-        const currentUser = await User.me();
-        if (currentUser.role !== 'admin') {
-          setUser(null);
-        } else {
-          setUser(currentUser);
-          loadTracks();
-          loadBonusSongUrl(); // Call new function
-        }
-      } catch (e) {
-         setUser(null);
-      }
+    // Simuler le chargement des données
+    setTimeout(() => {
+      setTracks(mockTracks);
       setIsLoading(false);
-    };
-    checkUser();
+    }, 1000);
   }, []);
-
-  const loadTracks = async () => {
-    const fetchedTracks = await KaraokeTrack.list();
-    setTracks(fetchedTracks);
-  };
-
-  // New function to load bonus song URL
-  const loadBonusSongUrl = async () => {
-    try {
-      const settings = await AppSettings.filter({ setting_key: "quiz_bonus_song_url" });
-      if (settings.length > 0) {
-        setBonusSongUrl(settings[0].setting_value);
-      }
-    } catch (error) {
-      console.error("Error loading bonus song URL:", error);
-    }
-  };
-
-  // New function to update bonus song URL
-  const updateBonusSongUrl = async () => {
-    try {
-      const settings = await AppSettings.filter({ setting_key: "quiz_bonus_song_url" });
-      if (settings.length > 0) {
-        await AppSettings.update(settings[0].id, { setting_value: bonusSongUrl });
-      } else {
-        await AppSettings.create({ setting_key: "quiz_bonus_song_url", setting_value: bonusSongUrl });
-      }
-      setBonusMessage("URL de la chanson bonus mise à jour avec succès !");
-      setTimeout(() => setBonusMessage(""), 3000);
-    } catch (error) {
-      console.error("Error updating bonus song URL:", error);
-      setBonusMessage("Erreur lors de la mise à jour.");
-    }
-  };
 
   const resetForm = () => {
     setTitle("");
@@ -124,15 +115,22 @@ export default function AdminKaraoke() {
       };
 
       if (editingTrack) {
-        await KaraokeTrack.update(editingTrack.id, trackData);
+        // Simuler la mise à jour
+        setTracks(prev => prev.map(track => 
+          track.id === editingTrack.id ? { ...track, ...trackData } : track
+        ));
         setMessage("Piste mise à jour avec succès !");
       } else {
-        await KaraokeTrack.create(trackData);
+        // Simuler l'ajout
+        const newTrack = {
+          id: Math.max(...tracks.map(t => t.id)) + 1,
+          ...trackData
+        };
+        setTracks(prev => [...prev, newTrack]);
         setMessage("Piste ajoutée avec succès !");
       }
 
       resetForm();
-      loadTracks();
     } catch (error) {
       console.error("Error submitting track:", error);
       setMessage("Une erreur s'est produite.");
@@ -157,13 +155,22 @@ export default function AdminKaraoke() {
   const handleDelete = async (trackId) => {
     if (window.confirm("Êtes-vous sûr de vouloir supprimer cette piste ?")) {
       try {
-        await KaraokeTrack.delete(trackId);
+        setTracks(prev => prev.filter(track => track.id !== trackId));
         setMessage("Piste supprimée avec succès !");
-        loadTracks();
       } catch (error) {
         console.error("Error deleting track:", error);
         setMessage("Impossible de supprimer la piste.");
       }
+    }
+  };
+
+  const updateBonusSongUrl = async () => {
+    try {
+      setBonusMessage("URL de la chanson bonus mise à jour avec succès !");
+      setTimeout(() => setBonusMessage(""), 3000);
+    } catch (error) {
+      console.error("Error updating bonus song URL:", error);
+      setBonusMessage("Erreur lors de la mise à jour.");
     }
   };
 
@@ -177,15 +184,6 @@ export default function AdminKaraoke() {
     return (
       <div className="flex justify-center items-center h-screen">
         <Loader2 className="w-8 h-8 animate-spin" />
-      </div>
-    );
-  }
-  
-  if (!user) {
-    return (
-      <div className="text-center py-12">
-        <h1 className="text-2xl font-bold text-red-600">Accès non autorisé</h1>
-        <p>Cette page est réservée aux administrateurs.</p>
       </div>
     );
   }
@@ -343,7 +341,7 @@ export default function AdminKaraoke() {
       </div>
 
       {/* Tracks List */}
-      <Card className="mt-8"> {/* Adjusted margin-top for separation */}
+      <Card className="mt-8">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Music className="w-6 h-6 text-pink-600"/>

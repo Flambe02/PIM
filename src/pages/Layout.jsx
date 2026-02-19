@@ -168,6 +168,51 @@ export default function Layout({ children }) {
       <main className="flex-1">
         {children}
       </main>
+
+      {/* Footer */}
+      <footer className="bg-white/90 border-t border-purple-100 mt-16 py-10">
+        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">Pimentão en Chansons</h3>
+            <p className="text-gray-600 text-sm mb-2">Les classiques en musique pour enfants</p>
+            <p className="text-gray-500 text-xs">&copy; {new Date().getFullYear()} Pimentão. Tous droits réservés.<span className="ml-2 text-gray-400 text-[10px] align-middle">v{typeof __APP_VERSION__ !== "undefined" ? __APP_VERSION__ : "dev"}</span></p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">Découvrir</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/blog" className="hover:text-purple-600 transition-colors font-semibold">Notre Blog</Link>
+              </li>
+              <li>
+                <Link to="/albums" className="hover:text-purple-600 transition-colors">Albums</Link>
+              </li>
+              <li>
+                <Link to="/tracks" className="hover:text-purple-600 transition-colors">Chansons</Link>
+              </li>
+              <li>
+                <Link to="/activities" className="hover:text-purple-600 transition-colors">Activités</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">Ressources</h3>
+            <ul className="space-y-2">
+              <li><Link to="/karaoke" className="hover:text-purple-600 transition-colors">Karaoké</Link></li>
+              <li><Link to="/characters" className="hover:text-purple-600 transition-colors">Personnages</Link></li>
+              <li><Link to="/about" className="hover:text-purple-600 transition-colors">À propos</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">Contact</h3>
+            <div className="flex gap-3 mt-2">
+              <a href="mailto:Pimentaoenchansons@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600" title="Envoyer un email">
+                {/* Icône email Lucide ou SVG */}
+                <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-mail"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,14 22,4"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

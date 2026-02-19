@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { liensKaraoke } from "@/data/liensKaraoke.js";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -67,12 +68,21 @@ export default function Karaoke() {
 
   return (
     <div className="min-h-screen py-8">
+      <Helmet>
+        <title>Karaoké pour Enfants Gratuit | Pimentão en Chansons</title>
+        <meta name="description" content="Chantez en famille avec notre karaoké pour enfants ! Contes de Perrault, Fables de La Fontaine, Molière en chansons. Gratuit, en ligne, pour tous les âges." />
+        <link rel="canonical" href="https://www.pimentao.fr/karaoke" />
+        <meta property="og:title" content="Karaoké pour Enfants Gratuit | Pimentão en Chansons" />
+        <meta property="og:description" content="Chantez en famille avec notre karaoké pour enfants ! Contes, fables et Molière en chansons. Gratuit et en ligne." />
+        <meta property="og:url" content="https://www.pimentao.fr/karaoke" />
+      </Helmet>
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gradient mb-8" style={{textAlign: 'center'}}>Karaoké pour enfants</h1>
+          <p className="text-5xl md:text-6xl font-bold text-gradient mb-4">
             🎤 Session Karaoké 🎤
-          </h1>
+          </p>
           <div className="karaoke-introduction bg-white/80 shadow rounded-xl py-5 px-4 md:px-8 mx-auto max-w-6xl mb-6 border border-purple-100">
             <h2 className="text-lg md:text-xl font-semibold text-purple-600 mb-3">À vous de chanter ! La scène est ouverte</h2>
             <div className="max-w-3xl mx-auto">

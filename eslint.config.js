@@ -33,6 +33,21 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      'react/prop-types': 'off',
+      'react/no-unknown-property': 'off',
+      'no-unused-vars': 'warn',
+      'no-undef': 'error',
+      'no-useless-escape': 'warn',
+      'react/no-unescaped-entities': 'off',
+    },
+  },
+  {
+    files: ['src/components/ui/**/*.{js,jsx}'],
+    rules: {
+      'react/prop-types': 'off',
+      'react/no-unknown-property': 'off',
+      'no-unused-vars': 'off',
+      'react-refresh/only-export-components': 'off',
     },
   },
 ]

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,10 +9,17 @@ import { createPageUrl } from "@/utils";
 export default function About() {
   return (
     <div className="min-h-screen py-8">
+      <Helmet>
+        <title>À Propos | Pimentão en Chansons - Musique pour Enfants</title>
+        <meta name="description" content="Découvrez Pimentão en Chansons : un projet musical qui réinvente Perrault, La Fontaine et Molière pour les enfants. Une musique éducative, ludique et de qualité professionnelle." />
+        <link rel="canonical" href="https://www.pimentao.fr/about" />
+        <meta property="og:title" content="À Propos | Pimentão en Chansons" />
+        <meta property="og:url" content="https://www.pimentao.fr/about" />
+      </Helmet>
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gradient mb-8" style={{textAlign: 'center'}}>
             À Propos de Nos Chansons
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

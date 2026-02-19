@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -112,10 +113,17 @@ export default function Characters() {
 
   return (
     <div className="min-h-screen py-8">
+      <Helmet>
+        <title>Personnages des Chansons | Pimentão en Chansons</title>
+        <meta name="description" content="Rencontrez Scapin, Agnès, Cendrillon, le Corbeau, la Cigale et tous les personnages des chansons Pimentão. Des héros de Perrault, La Fontaine et Molière pour les enfants." />
+        <link rel="canonical" href="https://www.pimentao.fr/characters" />
+        <meta property="og:title" content="Personnages des Chansons | Pimentão en Chansons" />
+        <meta property="og:url" content="https://www.pimentao.fr/characters" />
+      </Helmet>
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gradient mb-8" style={{textAlign: 'center'}}>
             Nos Personnages Enchantés
           </h1>
           <div className="character-introduction bg-white/80 shadow rounded-xl py-5 px-4 md:px-8 mx-auto max-w-6xl mb-6 border border-purple-100">

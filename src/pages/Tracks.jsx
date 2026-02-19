@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Track } from "@/api/entities";
+import { Helmet } from "react-helmet-async";
 import { Play, Pause, Music, Clock, Heart, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -8,35 +8,14 @@ import { Badge } from "@/components/ui/badge";
 export default function Tracks() {
   const [tracks, setTracks] = useState([]);
   const [playingTrack, setPlayingTrack] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [selectedAlbum, setSelectedAlbum] = useState("moliere");
 
   useEffect(() => {
-    loadTracks();
+    // Plus besoin de charger des tracks depuis Base44
+    setIsLoading(false);
   }, []);
 
-  // SEO Optimization - Mise à jour des balises meta
-  useEffect(() => {
-    // Modification du titre de la page
-    document.title = "Nos Chansons pour Enfants à Écouter - Pimentão en Chansons";
-    
-    // Mise à jour de la meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Explorez la liste complète des chansons pour enfants par Pimentão. Des créations originales, éducatives et des classiques revisités pour l\'éveil musical de 0 à 7 ans.');
-    }
-  }, []);
-
-  const loadTracks = async () => {
-    try {
-      const data = await Track.list("track_number");
-      setTracks(data);
-    } catch (error) {
-      console.error("Error loading tracks:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   const albums = {
     moliere: {
@@ -86,12 +65,18 @@ export default function Tracks() {
 
   return (
     <div className="min-h-screen py-8">
+      <Helmet>
+        <title>Toutes les Chansons pour Enfants | Pimentão en Chansons</title>
+        <meta name="description" content="Écoutez toutes les chansons pour enfants de Pimentão : Molière en Chansons, Contes de Perrault, Fables de La Fontaine. 38 chansons éducatives sur Spotify et Apple Music." />
+        <link rel="canonical" href="https://www.pimentao.fr/tracks" />
+        <meta property="og:title" content="Toutes les Chansons pour Enfants | Pimentão en Chansons" />
+        <meta property="og:description" content="38 chansons éducatives pour enfants : Molière, Perrault, La Fontaine. Disponibles sur Spotify, Apple Music et YouTube Music." />
+        <meta property="og:url" content="https://www.pimentao.fr/tracks" />
+      </Helmet>
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-4">
-            Toutes nos chansons pour enfants
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gradient mb-8" style={{textAlign: 'center'}}>Toutes nos chansons pour enfants</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
             Bienvenue dans l'univers musical de Pimentão ! Nous créons avec passion des chansons pour enfants bienveillantes et intelligentes, parfaites pour apprendre, danser, ou pour le rituel du coucher. Découvrez ci-dessous toutes nos créations disponibles en écoute.
           </p>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -120,11 +121,18 @@ export default function Activities() {
 
   return (
     <div className="min-h-screen py-8">
+      <Helmet>
+        <title>Activités & Jeux Musicaux pour Enfants | Pimentão en Chansons</title>
+        <meta name="description" content="Quiz, jeux, coloriages et activités musicales interactives pour les enfants. Testez vos connaissances sur Perrault, La Fontaine et Molière avec Pimentão en Chansons." />
+        <link rel="canonical" href="https://www.pimentao.fr/activities" />
+        <meta property="og:title" content="Activités & Jeux Musicaux pour Enfants | Pimentão en Chansons" />
+        <meta property="og:url" content="https://www.pimentao.fr/activities" />
+      </Helmet>
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-4">
-            Activités et Jeux Amusants
+          <h1 className="text-4xl md:text-5xl font-bold text-gradient mb-8" style={{textAlign: 'center'}}>
+            Activités et Jeux Musicaux pour Enfants
           </h1>
           <div className="activities-introduction bg-white/80 shadow rounded-xl py-5 px-4 md:px-8 mx-auto max-w-6xl mb-6 border border-purple-100">
             <h2 className="text-lg md:text-xl font-semibold text-purple-600 mb-3">Prolongez l'aventure avec nos activités créatives !</h2>
@@ -295,6 +303,24 @@ export default function Activities() {
               </Card>
             );
           })}
+        </div>
+
+        {/* Promotion Blog */}
+        <div className="max-w-3xl mx-auto mt-16 mb-8">
+          <div className="rounded-3xl bg-gradient-to-r from-purple-100 via-pink-100 to-blue-100 shadow-lg p-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-gradient mb-2">
+              Envie de plus d'idées ?
+            </h2>
+            <p className="text-lg text-gray-700 mb-4">
+              Retrouvez des conseils, des inspirations et des astuces pour l'éveil musical sur notre blog.
+            </p>
+            <a
+              href="/#/blog"
+              className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold shadow hover:scale-105 transition-transform"
+            >
+              Découvrez notre blog
+            </a>
+          </div>
         </div>
 
         {/* Bottom Call to Action */}
