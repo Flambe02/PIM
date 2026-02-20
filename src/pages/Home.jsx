@@ -57,23 +57,29 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-white text-pink-600 hover:bg-white/90 text-xl px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300"
                 asChild
               >
-                <Link to={createPageUrl("Albums")}>
+                <Link
+                  to={createPageUrl("Albums")}
+                  data-gtm-event="clic_albums_hero"
+                >
                   <Disc3 className="w-6 h-6 mr-2" />
                   Découvrir les albums
                 </Link>
               </Button>
               
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-pink-600 text-xl px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300"
                 asChild
               >
-                <Link to={createPageUrl("Karaoke")}>
+                <Link
+                  to={createPageUrl("Karaoke")}
+                  data-gtm-event="clic_karaoke_hero"
+                >
                   <Mic className="w-6 h-6 mr-2" />
                   Session Karaoké
                 </Link>

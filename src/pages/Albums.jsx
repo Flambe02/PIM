@@ -50,14 +50,21 @@ export default function Albums() {
 
   const displayAlbums = realAlbums;
 
-  const StreamingButton = ({ url, platform, icon: Icon, color }) => (
+  const StreamingButton = ({ url, platform, icon: Icon, color, albumTitle }) => (
     <Button
       asChild
       variant="outline"
       size="sm"
       className={`${color} border-current hover:bg-current hover:text-white transition-all duration-300`}
     >
-      <a href={url} target="_blank" rel="noopener noreferrer">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-gtm-event="clic_streaming"
+        data-gtm-platform={platform}
+        data-gtm-album={albumTitle}
+      >
         <Icon className="w-4 h-4 mr-2" />
         {platform}
       </a>
@@ -180,18 +187,21 @@ export default function Albums() {
                         platform="Spotify"
                         icon={Music}
                         color="text-green-600"
+                        albumTitle={album.title}
                       />
                       <StreamingButton
                         url={album.apple_music_url}
                         platform="Apple Music"
                         icon={Music}
                         color="text-gray-800"
+                        albumTitle={album.title}
                       />
                       <StreamingButton
                         url={album.youtube_music_url}
                         platform="YouTube Music"
                         icon={Play}
                         color="text-red-600"
+                        albumTitle={album.title}
                       />
                     </div>
                   </div>
