@@ -68,10 +68,10 @@ export default function Tracks() {
       <Helmet>
         <title>Toutes les Chansons pour Enfants | Pimentão en Chansons</title>
         <meta name="description" content="Écoutez toutes les chansons pour enfants de Pimentão : Molière en Chansons, Contes de Perrault, Fables de La Fontaine. 38 chansons éducatives sur Spotify et Apple Music." />
-        <link rel="canonical" href="https://www.pimentao.fr/tracks" />
+        <link rel="canonical" href="https://pimentao.fr/tracks" />
         <meta property="og:title" content="Toutes les Chansons pour Enfants | Pimentão en Chansons" />
         <meta property="og:description" content="38 chansons éducatives pour enfants : Molière, Perrault, La Fontaine. Disponibles sur Spotify, Apple Music et YouTube Music." />
-        <meta property="og:url" content="https://www.pimentao.fr/tracks" />
+        <meta property="og:url" content="https://pimentao.fr/tracks" />
       </Helmet>
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}

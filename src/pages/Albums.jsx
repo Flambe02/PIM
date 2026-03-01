@@ -78,10 +78,10 @@ export default function Albums() {
       <Helmet>
         <title>Albums de Musique pour Enfants | Pimentão en Chansons</title>
         <meta name="description" content="3 albums éducatifs pour enfants : Il était une chanson (Perrault), Les Fables en Chantant (La Fontaine), Molière en Chansons. Disponibles sur Spotify, Apple Music, YouTube Music." />
-        <link rel="canonical" href="https://www.pimentao.fr/albums" />
+        <link rel="canonical" href="https://pimentao.fr/albums" />
         <meta property="og:title" content="Albums de Musique pour Enfants | Pimentão en Chansons" />
         <meta property="og:description" content="3 albums éducatifs pour enfants : Contes de Perrault, Fables de La Fontaine et Molière en chansons. Écouter sur toutes les plateformes de streaming." />
-        <meta property="og:url" content="https://www.pimentao.fr/albums" />
+        <meta property="og:url" content="https://pimentao.fr/albums" />
       </Helmet>
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}

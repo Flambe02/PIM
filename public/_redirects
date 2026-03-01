@@ -2,7 +2,10 @@
 /home/ / 301
 /Home / 301
 /Home/ / 301
-/index.html / 301
+/index.html / 301!
 /home/index.html / 301
+/blog /albums 301
+/blog/ /albums 301
+/blog/* /albums 301
 
 /* /index.html 200

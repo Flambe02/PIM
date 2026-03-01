@@ -71,10 +71,10 @@ export default function Karaoke() {
       <Helmet>
         <title>Karaoké pour Enfants Gratuit | Pimentão en Chansons</title>
         <meta name="description" content="Chantez en famille avec notre karaoké pour enfants ! Contes de Perrault, Fables de La Fontaine, Molière en chansons. Gratuit, en ligne, pour tous les âges." />
-        <link rel="canonical" href="https://www.pimentao.fr/karaoke" />
+        <link rel="canonical" href="https://pimentao.fr/karaoke" />
         <meta property="og:title" content="Karaoké pour Enfants Gratuit | Pimentão en Chansons" />
         <meta property="og:description" content="Chantez en famille avec notre karaoké pour enfants ! Contes, fables et Molière en chansons. Gratuit et en ligne." />
-        <meta property="og:url" content="https://www.pimentao.fr/karaoke" />
+        <meta property="og:url" content="https://pimentao.fr/karaoke" />
       </Helmet>
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}

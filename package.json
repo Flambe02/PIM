@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.3",
   "type": "module",
-  "homepage": "https://www.pimentao.fr",
+  "homepage": "https://pimentao.fr",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

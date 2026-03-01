@@ -116,9 +116,9 @@ export default function Characters() {
       <Helmet>
         <title>Personnages des Chansons | Pimentão en Chansons</title>
         <meta name="description" content="Rencontrez Scapin, Agnès, Cendrillon, le Corbeau, la Cigale et tous les personnages des chansons Pimentão. Des héros de Perrault, La Fontaine et Molière pour les enfants." />
-        <link rel="canonical" href="https://www.pimentao.fr/characters" />
+        <link rel="canonical" href="https://pimentao.fr/characters" />
         <meta property="og:title" content="Personnages des Chansons | Pimentão en Chansons" />
-        <meta property="og:url" content="https://www.pimentao.fr/characters" />
+        <meta property="og:url" content="https://pimentao.fr/characters" />
       </Helmet>
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}

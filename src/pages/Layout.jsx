@@ -181,9 +181,6 @@ export default function Layout({ children }) {
             <h3 className="text-lg font-semibold text-gray-800 mb-4">Découvrir</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/blog" className="hover:text-purple-600 transition-colors font-semibold">Notre Blog</Link>
-              </li>
-              <li>
                 <Link to="/albums" className="hover:text-purple-600 transition-colors">Albums</Link>
               </li>
               <li>

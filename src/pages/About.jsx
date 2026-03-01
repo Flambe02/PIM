@@ -12,9 +12,9 @@ export default function About() {
       <Helmet>
         <title>À Propos | Pimentão en Chansons - Musique pour Enfants</title>
         <meta name="description" content="Découvrez Pimentão en Chansons : un projet musical qui réinvente Perrault, La Fontaine et Molière pour les enfants. Une musique éducative, ludique et de qualité professionnelle." />
-        <link rel="canonical" href="https://www.pimentao.fr/about" />
+        <link rel="canonical" href="https://pimentao.fr/about" />
         <meta property="og:title" content="À Propos | Pimentão en Chansons" />
-        <meta property="og:url" content="https://www.pimentao.fr/about" />
+        <meta property="og:url" content="https://pimentao.fr/about" />
       </Helmet>
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}

@@ -124,9 +124,9 @@ export default function Activities() {
       <Helmet>
         <title>Activités & Jeux Musicaux pour Enfants | Pimentão en Chansons</title>
         <meta name="description" content="Quiz, jeux, coloriages et activités musicales interactives pour les enfants. Testez vos connaissances sur Perrault, La Fontaine et Molière avec Pimentão en Chansons." />
-        <link rel="canonical" href="https://www.pimentao.fr/activities" />
+        <link rel="canonical" href="https://pimentao.fr/activities" />
         <meta property="og:title" content="Activités & Jeux Musicaux pour Enfants | Pimentão en Chansons" />
-        <meta property="og:url" content="https://www.pimentao.fr/activities" />
+        <meta property="og:url" content="https://pimentao.fr/activities" />
       </Helmet>
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
@@ -312,13 +312,13 @@ export default function Activities() {
               Envie de plus d'idées ?
             </h2>
             <p className="text-lg text-gray-700 mb-4">
-              Retrouvez des conseils, des inspirations et des astuces pour l'éveil musical sur notre blog.
+              Retrouvez des conseils, des inspirations et des astuces pour l'éveil musical dans nos albums.
             </p>
             <a
-              href="/#/blog"
+              href="/albums"
               className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold shadow hover:scale-105 transition-transform"
             >
-              Découvrez notre blog
+              Découvrir les albums
             </a>
           </div>
         </div>

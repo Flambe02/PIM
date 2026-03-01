@@ -1,6 +1,6 @@
 import './App.css'
 import { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from "@/components/ui/toaster"
 
 import Layout from '@/pages/Layout';
@@ -25,6 +25,8 @@ function App() {
             <Route path="/activities" element={<Activities />} />
             <Route path="/about" element={<About />} />
             <Route path="/karaoke" element={<Karaoke />} />
+            <Route path="/blog" element={<Navigate to="/albums" replace />} />
+            <Route path="/blog/*" element={<Navigate to="/albums" replace />} />
             <Route path="/" element={<Home />} />
             <Route path="*" element={<div style={{padding: 40, textAlign: 'center', fontSize: 32}}>404 - Page non trouvée</div>} />
           </Routes>
